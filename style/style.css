@@ -1,0 +1,277 @@
+:root{
+    font-size: 62.5%;
+    --primary-color: #fff;
+    --secondary-color: #fecfb5;
+    --text-color: #000;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--primary-color);
+    height: 100%;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*Modo escuro*/
+/*Redes sociais Simbolos*/
+.navbar-contact-mode i, #themeSwitch i{
+    font-size: 2.0rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+#themeSwitch{
+    border: none;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+#themeSwitch i:first-child{
+    display: none;
+}
+.darkMode #themeSwitch i:first-child{
+    display: block;
+}
+.darkMode #themeSwitch i:last-child{
+    display: none;
+}
+/*Redes sociais Simbolos*/
+.darkMode{
+    --primary-color: #222;
+    --text-color: #fff;
+}
+/*Modo escuro*/
+/*Hamburger*/
+.hamburger{
+    cursor: pointer;
+    display: none;
+}
+.hamburger div{
+    background-color: var(--text-color);
+    width: 30px;
+    height: 2px;
+    margin: 8px;
+    transition: 0.3s;
+}
+/*Hamburger*/
+/*Idioma*/
+#language img{
+    max-width: 100%;
+    width: 2.1rem;
+}
+#language{
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+}
+#language img:first-child{
+    display: none;
+}
+#language .languageMode img:first-child{
+    display: block;
+}
+#language .languageMode img:last-child{
+    display: none;
+}
+/*Idioma*/
+/*Tecnologia e foto*/
+header{
+    background-color: var(--primary-color);
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    align-items: center;
+    width: 100%;
+    height: 4.5rem;
+    padding: 0 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.navbar-nav, ul{
+    width: 50%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+a, li{
+    list-style: none;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+.navbar-contact-mode{
+    display: flex;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    justify-content: space-between;
+}
+.container{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+.gridArea{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+        "tec foto"
+        "tec foto"
+        "tec foto"
+    ;
+    width: 100%;
+}
+.tec{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.proficiencia{
+    display: flex;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+.linguagem i{
+    font-size: 4.5rem;
+    gap: 1rem;
+}
+.linguagem{
+    position: relative;
+}
+.desc{
+    position: absolute;
+    font-size: 1.2rem;
+    transform: translateX(10%)
+}
+.desc{
+    position: relative;
+    transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
+    width: 0;
+    height: 5rem;
+    opacity: 0;
+    padding-top: 1.5rem;
+    color: var(--text-color);
+}
+.foto{
+    width: 100%;
+    overflow: hidden;
+}
+.foto .photo{
+    width: 100%;
+    max-height: 100%;
+}
+.myFoto{
+    width: 100%;
+}
+/*Tecnologia e foto*/
+/*Sobre mim*/
+.sobreMim{
+    background-color: var(--secondary-color);
+    padding: 3rem;
+    font-size: 1.5rem;
+}
+.sobreMim section{
+    text-wrap: auto;
+}
+.sobreMim section h1{
+    margin-bottom: 2rem;
+}
+.lang5 p{
+    margin-top: 2.5rem;
+}
+/*Sobre mim*/
+/*Projetos*/
+/*.projGridAreas{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 50vh;
+}*/
+.projetos{
+    display: grid;
+    margin: 1rem 0;
+    place-items: center;
+}
+.proj2, .proj3{
+    background-color: #000;
+}
+.proj1Image{
+    width: 100%;
+    overflow: hidden;
+}
+.proj1Image img{
+    width: 100%;
+    max-height: 100%;
+}
+/*Projetos*/
+/*Footer*/
+.footerDiv{
+    padding: 0.9rem;
+    font-size: 1.1rem;
+    height: 5rem;
+    background-color: var(--secondary-color);
+    display: flex;
+}
+.footerDir{
+    display: grid;
+    place-items: center;
+    padding-left: 2rem;
+}
+/*Footer*/
+/*Animations*/
+.proficiencia:hover .linguagem{
+    transform: translateX(40%);
+}
+.proficiencia:hover .desc{
+    opacity: 1;
+    width: 100%;
+}
+/*Animations*/
+@media(max-width: 910px) {
+    /*Tecnologia e foto*/
+    .grid{
+        display: block;
+    }
+    /*Tecnologia e foto*/
+    .links{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in;
+    }
+    .hamburger{
+        display: block;
+    }
+    .footerDiv{
+        font-size: 0.8rem;
+    }
+    
+
+}
+.links.active{
+    transform: translateX(0%);
+}
+.hamburger.active .linha1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.hamburger.active .linha2{
+    opacity: 0;
+}
+.hamburger.active .linha3{
+    transform: rotate(45deg) translate(-5px, -7px);
+}
